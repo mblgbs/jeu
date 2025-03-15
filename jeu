@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker Personnalisé</title>
+    <style>
+        body {
+            background-color: #f8f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #clicker {
+            width: 200px;
+            height: 200px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+        }
+        #score {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="clicker">Cliquez-moi !</div>
+    <div id="score">Score: 0</div>
+
+    <script>
+        let score = 0;
+
+        document.getElementById('clicker').addEventListener('click', function() {
+            score++;
+            document.getElementById('score').innerText = 'Score: ' + score;
+        });
+
+        // Fonction de sauvegarde (à implémenter avec un backend)
+        function saveScore() {
+            // Logique de sauvegarde
+        }
+
+        // Fonction de chargement (à implémenter avec un backend)
+        function loadScore() {
+            // Logique de chargement
+        }
+    </script>
+</body>
+</html>
